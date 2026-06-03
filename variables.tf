@@ -41,5 +41,5 @@ variable "need_nat_gateway" {
 variable "need_single_nat_gateway" {
     type = bool
     default = false
-    description = "Whether to place a NAT gateway is all public subnets or not"
+    description = "Set to true for a single shared NAT gateway (cost-saving), false for one NAT per AZ (high availability)"
 }
