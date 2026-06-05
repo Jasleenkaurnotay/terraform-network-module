@@ -9,9 +9,11 @@ locals {
 
     # converting the public subnet list(object) to a map
     public_subnet_map = {
-        for subnet in var. public_subnet_data : subnet.cidr => subnet 
+        for subnet in var.public_subnet_data : subnet.cidr => subnet 
+    }
+
+    # Converting the private subnet list(object) to a map
+    private_subnet_map = {
+        for subnet in var.private_subnet_data : subnet.cidr => subnet
     }
 }
-
-
-
